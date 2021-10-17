@@ -16,3 +16,8 @@ The process is that you hold your smartphone at the position where your head is 
 
 [VSCode](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
 
+### Run the development server
+
+```bash
+npm run dev
+```
