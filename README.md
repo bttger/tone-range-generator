@@ -10,6 +10,10 @@ In my case, I have used the free Android app [Spectroid](https://play.google.com
 
 The process is that you hold your smartphone at the position where your head is usually, and then you press `start` to  run through the frequencies and record it with your spectrum analyzer app. Before each optimization run you should reset your "max hold" line. The line will show you which frequencies are under- and overrepresented. You should then try to optimize the sound with the position of your speakers, your room layout, an equalizer, and your speakers internal options.
 
+The following image shows the red "max hold" line. On the top right you can reset it.
+
+<img src="https://i.imgur.com/UeZy1M7.jpeg" width="400" title="Screenshot of the Spectroid app" alt="Screenshot of the Spectroid app">
+
 ## Development
 
 ### Recommended IDE Setup
