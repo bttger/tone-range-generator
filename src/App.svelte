@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {Oscillator} from 'tone'
+    import {AutoFilter, Noise, Oscillator} from 'tone'
 
     let from = 50;
     let to = 8000;
@@ -30,6 +30,25 @@
         clearTimeout(runningTimeout);
         runningTimeout = undefined;
     }
+
+    // Pink Noise
+    let playingPinkNoise = false;
+    let noise: Noise;
+
+    function startPinkNoise() {
+        playingPinkNoise = true;
+        noise = new Noise('pink');
+        const filter = new AutoFilter({
+            baseFrequency: 200,
+            octaves: 8
+        }).toDestination();
+        noise.connect(filter).start();
+    }
+
+    function stopPinkNoise() {
+        noise.stop();
+        playingPinkNoise = false;
+    }
 </script>
 
 <main>
@@ -59,6 +78,15 @@
         <button on:click={stop}>Stop</button>
     {:else}
         <button on:click={start}>Start</button>
+    {/if}
+
+    <h2>
+        Pink Noise
+    </h2>
+    {#if playingPinkNoise}
+        <button on:click={stopPinkNoise}>Stop</button>
+    {:else}
+        <button on:click={startPinkNoise}>Start</button>
     {/if}
 </main>
 
