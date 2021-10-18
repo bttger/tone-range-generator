@@ -60,18 +60,18 @@
     </h2>
 
     <div>
-        <label>From (Hz)</label>
-        <input type=number min=10 max=20000 bind:value={from}>
+        <label for="from">From (Hz)</label>
+        <input id="from" type=number min=10 max=20000 bind:value={from}>
     </div>
 
     <div>
-        <label>To (Hz)</label>
-        <input type=number min=10 max=20000 bind:value={to}>
+        <label for="to">To (Hz)</label>
+        <input id="to" type=number min=10 max=20000 bind:value={to}>
     </div>
 
     <div>
-        <label>Duration (Seconds)</label>
-        <input type=number min=2 max=120 bind:value={seconds}>
+        <label for="secs">Duration (Seconds)</label>
+        <input id="secs" type=number min=2 max=120 bind:value={seconds}>
     </div>
 
     {#if runningTimeout}
